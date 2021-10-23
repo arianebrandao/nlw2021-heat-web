@@ -14,8 +14,9 @@ Esse projeto foi desenvolvido durante a semana do evento [DO WHILE 2021](https:/
 
 ## Projeto
 
-O projeto consiste em desenvolver uma aplicação completa, desde o back-end em Node.js, front-end para web em ReactJS,
-front-end mobile em React Native e para finalizar, um microserviço com Elixir.
+O objetivo do evento é desenvolver uma aplicação completa, desde o back-end em Node.js, front-end para web em ReactJS,
+front-end mobile em React Native e para finalizar, um microserviço com Elixir. Este projeto consiste em um sistema para enviar e
+visualizar mensagens em tempo real sobre o evento, para enviar uma mensagem o usuário deve estar logado com sua conta no Github.
 
 ## Layout
 
@@ -41,7 +42,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Agora você pode acessar [`localhost:3000`](http://localhost:3000) do seu navegador.
 
-* Essa aplicação depende do [back-end desenvolvido em node](https://github.com/arianebrandao/nlw2021-heat-node) estar rodando em [`localhost:4000`](http://localhost:4000).
+** OBS: Essa aplicação depende do [back-end desenvolvido em node](https://github.com/arianebrandao/nlw2021-heat-node) estar rodando em [`localhost:4000`](http://localhost:4000).
 
 ## Licença
 
