@@ -26,7 +26,7 @@ export function MessageList() {
   const [messages, setMessages ] = useState<Message[]>([])
 
   useEffect(() => {
-    setInterval(() => {
+    const timer = setInterval(() => {
       if(messagesQueue.length > 0) {
         setMessages(prevState => [
           messagesQueue[0],
@@ -37,6 +37,8 @@ export function MessageList() {
         messagesQueue.shift() //remove valor mais antigo do array
       }
     }, 3000) //3 segundos
+
+    return () => clearInterval(timer);
   }, [])
 
   useEffect(() => {

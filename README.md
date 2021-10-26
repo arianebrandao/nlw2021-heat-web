@@ -33,6 +33,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [React](https://reactjs.org)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev)
+- [Socket.IO](https://socket.io)
+- [Axios](https://axios-http.com)
 
 ## Como executar*
 
