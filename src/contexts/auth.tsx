@@ -1,6 +1,10 @@
 import { createContext, ReactNode, useEffect, useState } from "react";
 import { api } from "../services/api";
 
+const CLIENT_ID = '4f27d86430bf804d46b3'
+const SCOPE = 'user'; //dados do avatar do usuario
+const REDIRECT_URI = 'http://localhost:3000'
+
 interface AuthProvider {
   children: ReactNode;
 }
@@ -32,7 +36,7 @@ export const AuthContext = createContext({} as AuthContextData)
 
 export function AuthProvider(props: AuthProvider) {
   const [user, setUser] = useState<User | null>(null)
-  const signInUrl = `https://github.com/login/oauth/authorize?scope=user&client_id=4f27d86430bf804d46b3&redirect_uri=http://localhost:3000`;
+  const signInUrl = `https://github.com/login/oauth/authorize?scope=${SCOPE}&client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}`;
 
   async function signIn(githubCode: string) {
     const response = await api.post<AuthResponse>('authenticate', {

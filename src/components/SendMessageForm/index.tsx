@@ -47,6 +47,7 @@ export function SendMessageForm() {
           placeholder="Qual sua expectativa para o evento?"
           onChange={event => setMessage(event.target.value)}
           value={message}
+          maxLength={140}
         />
 
         <button type="submit">Enviar mensagem</button>
