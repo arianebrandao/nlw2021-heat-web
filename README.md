@@ -8,9 +8,13 @@
   <img alt="DO WHILE 2021" src=".github/app.png" width="100%">
 </p>
 
-## 🚀 NLW Heat - DO WHILE
+## 🚀 NLW Heat 2021 - DO WHILE
 
 Esse projeto foi desenvolvido durante a semana do evento [DO WHILE 2021](https://nextlevelweek.com) da RocketSeat.
+
+## App online para testar
+
+App online: [https://nlwheat-2021.vercel.app](https://nlwheat-2021.vercel.app/). Front-end hospedado no [Vercel](https://vercel.com/) e back-end hospedado no [Heroku](https://heroku.com).
 
 ## Projeto
 
