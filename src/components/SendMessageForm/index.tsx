@@ -89,7 +89,7 @@ export function SendMessageForm() {
             maxLength={140}
           />
 
-          {sendingMessage ? (
+          { !sendingMessage ? (
             <button type="submit">Enviar mensagem</button>
           ) : (
             <button type="button" disabled>
