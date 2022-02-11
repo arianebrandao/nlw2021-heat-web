@@ -32,7 +32,7 @@ export const AuthContext = createContext({} as AuthContextData)
 
 export function AuthProvider(props: AuthProvider) {
   const [user, setUser] = useState<User | null>(null)
-  const signInUrl = `https://github.com/login/oauth/authorize?scope=${process.env.AUTH_SCOPE}&client_id=${process.env.AUTH_CLIENT_ID}&redirect_uri=${process.env.AUTH_REDIRECT_URI}`;
+  const signInUrl = `https://github.com/login/oauth/authorize?scope=user&client_id=4f27d86430bf804d46b3&redirect_uri=https://nlwheat-2021.vercel.app`;
 
   async function signIn(githubCode: string) {
     const response = await api.post<AuthResponse>('authenticate', {
