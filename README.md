@@ -14,7 +14,7 @@ Esse projeto foi desenvolvido durante a semana do evento [DO WHILE 2021](https:/
 
 ## App online para testar
 
-App online: [https://nlwheat-2021.vercel.app](https://nlwheat-2021.vercel.app/). Front-end hospedado no [Vercel](https://vercel.com/) e back-end hospedado no [Heroku](https://heroku.com).
+App online: [https://nlwheat-2021.vercel.app](https://nlwheat-2021.vercel.app/). Front-end hospedado no [Vercel](https://vercel.com/) e back-end estava hospedado na [Heroku](https://heroku.com), mas esse serviço passou a ser pago, então irei migrar para outro serviço em breve, portanto o app não está funcionando no momento.
 
 ## Projeto
 
