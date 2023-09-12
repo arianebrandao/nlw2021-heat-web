@@ -14,12 +14,12 @@ Esse projeto foi desenvolvido durante a semana do evento [DO WHILE 2021](https:/
 
 ## App online para testar
 
-App online: [https://nlwheat-2021.vercel.app](https://nlwheat-2021.vercel.app/). Front-end hospedado no [Vercel](https://vercel.com/) e back-end estava hospedado na [Heroku](https://heroku.com), mas esse serviço passou a ser pago, então irei migrar para outro serviço em breve, portanto o app não está funcionando no momento.
+App online: [https://nlwheat-2021.vercel.app](https://nlwheat-2021.vercel.app/). Front-end hospedado no [Vercel](https://vercel.com/), back-end hospedado no [Render](https://render.com) e banco de dados hospedado no [Supabase](https://supabase.com/).
 
 ## Projeto
 
 O objetivo do evento é desenvolver uma aplicação completa, desde o back-end em Node.js, front-end para web em ReactJS,
-front-end mobile em React Native e para finalizar, um microserviço com Elixir. Este projeto consiste em um sistema para enviar e
+front-end mobile em React Native e para finalizar, um microsserviço com Elixir. Este projeto consiste em um sistema para enviar e
 visualizar mensagens em tempo real sobre o evento, para enviar uma mensagem o usuário deve estar logado com sua conta no Github.
 
 ## Layout
@@ -44,6 +44,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - Clone o repositório
 - Instale as dependências com `yarn`
+- Renomeie o arquivo `.env.example` para `.env` e adicione os valores das variáveis
 - Inicie o servidor com `yarn dev`
 
 Agora você pode acessar [`localhost:3000`](http://localhost:3000) do seu navegador.

@@ -16,7 +16,7 @@ interface Message {
 
 const messagesQueue: Message[] = []
 
-const socket = io('https://nlwheat-2021.herokuapp.com/')
+const socket = io('https://nlw-heat.onrender.com/')
 
 socket.on('new_message', (newMessage: Message) => {
   messagesQueue.push(newMessage)
