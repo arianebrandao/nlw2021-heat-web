@@ -11,6 +11,7 @@ interface Message {
   user: {
     name: string;
     avatar_url: string;
+    login: string;
   }
 }
 
@@ -61,7 +62,7 @@ export function MessageList() {
               <div className={styles.userImage}>
                 <img src={message.user.avatar_url} alt={message.user.name} />
               </div>
-              <span>{message.user.name}</span>
+              <a href={`https://github.com/${message.user.login}`} target="_blank" ref="nofollow" >{message.user.name}</a>
             </div>
           </li>
         )) }
