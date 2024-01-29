@@ -32,25 +32,14 @@ export function SendMessageForm() {
 
         setSendingMessage(false);
       } catch (err) {
-        if (err instanceof Error) {
-          toast.error("Oops... algo deu errado. Por favor, tente novamente.", {
-            style: {
-              borderRadius: "10px",
-              background: "#333",
-              color: "#fff",
-            },
-          });
-          console.log(err);
-        } else {
-          toast.error("Oops... algo deu errado. Por favor, tente novamente.", {
-            style: {
-              borderRadius: "10px",
-              background: "#333",
-              color: "#fff",
-            },
-          });
-          console.log(err);
-        }
+        toast.error("Oops... algo deu errado. Por favor, tente novamente.", {
+          style: {
+            borderRadius: "10px",
+            background: "#333",
+            color: "#fff",
+          },
+        });
+        console.log(err);
       }
     }
   }

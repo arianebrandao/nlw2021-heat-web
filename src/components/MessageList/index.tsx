@@ -4,6 +4,7 @@ import { api } from '../../services/api'
 
 import styles from './styles.module.scss'
 import logoImage from '../../assets/logo.svg'
+import { Loading } from '../Loading'
 
 interface Message {
   id: string;
@@ -24,6 +25,7 @@ socket.on('new_message', (newMessage: Message) => {
 
 export function MessageList() {
   const [messages, setMessages ] = useState<Message[]>([])
+  const [isLoadingLast3Messages, setIsLoadingLast3Messages] = useState<boolean>(false)
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -42,30 +44,33 @@ export function MessageList() {
   }, [])
 
   useEffect(() => {
+    setIsLoadingLast3Messages(true)
     api.get<Message[]>('messages/last3').then(response => {
-      setMessages(response.data)
+      // setMessages(response.data)
+        setTimeout(() => {
+          setMessages(response.data)
+          setIsLoadingLast3Messages(false)
+      }, 4000);
     })
   }, [])
-
 
   return (
     <div className={styles.messageListWrapper}>
       <img src={logoImage} alt="DoWhile 2021" />
-
       <ul className={styles.messageList}>
-
-        { messages.map(message => (
-          <li key={message.id} className={styles.message}>
-            <p className={styles.messageContent}>{message.text}</p>
-            <div className={styles.messageUser}>
-              <div className={styles.userImage}>
-                <img src={message.user.avatar_url} alt={message.user.name} />
+        {isLoadingLast3Messages ? <Loading /> : (
+          messages.map(message => (
+            <li key={message.id} className={styles.message}>
+              <p className={styles.messageContent}>{message.text}</p>
+              <div className={styles.messageUser}>
+                <div className={styles.userImage}>
+                  <img src={message.user.avatar_url} alt={message.user.name} />
+                </div>
+                <span>{message.user.name}</span>
               </div>
-              <span>{message.user.name}</span>
-            </div>
-          </li>
-        )) }
-
+            </li>
+          ))
+        )}
       </ul>
     </div>
   )
