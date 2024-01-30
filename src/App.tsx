@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 import styles from "./App.module.scss";
 import { LoginBox } from "./components/LoginBox";
 import { MessageList } from "./components/MessageList";
@@ -13,11 +13,11 @@ export function App() {
       <Toaster />
       <main
         className={`${styles.contentWrapper} ${
-          !!user ? styles.contentSigned : ""
+          user ? styles.contentSigned : ""
         }`}
       >
         <MessageList />
-        {!!user ? <SendMessageForm /> : <LoginBox />}
+        {user ? <SendMessageForm /> : <LoginBox />}
       </main>
     </>
   );
