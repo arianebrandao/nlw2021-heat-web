@@ -46,11 +46,8 @@ export function MessageList() {
   useEffect(() => {
     setIsLoadingLast3Messages(true)
     api.get<Message[]>('messages/last3').then(response => {
-      // setMessages(response.data)
-        setTimeout(() => {
-          setMessages(response.data)
-          setIsLoadingLast3Messages(false)
-      }, 4000);
+      setMessages(response.data)
+      setIsLoadingLast3Messages(false)
     })
   }, [])
 
