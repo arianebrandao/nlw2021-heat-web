@@ -2,20 +2,41 @@
   max-width: 1200px;
   height: 100vh;
   margin: 0 auto;
+  position: relative;
 
   display: grid;
-  grid-template-columns: 1fr 453px;
-  column-gap: 120px;
-  position: relative;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+    "logo"
+    "message"
+    "form";
+  grid-template-rows: 90px auto auto;
+  justify-items: center;
 }
 
-.contentSigned::before {
-  content: '';
-  height: 100vh;
-  width: 420px;
-  background: url(./assets/background.svg) no-repeat;
-  background-size: cover;
-  position: absolute;
-  right: -200px;
-  top: 0;
+@media (min-width: 768px) {
+  .contentWrapper {
+    grid-template-columns: 1fr 1fr 50%;
+    grid-template-areas: 
+      "logo logo form"
+      "message message form";
+    grid-template-rows: 120px auto;
+  }
+}
+@media (min-width: 992px) {
+  .contentWrapper {
+    grid-template-columns: 1fr 1fr 453px;
+    grid-template-areas: 
+      "logo logo form"
+      "message message form";
+    column-gap: 120px;
+    justify-items: start;
+  }
+}
+
+.logotipo {
+  height: 28px;
+  margin: 32px 0;
+
+  grid-area: logo;
 }

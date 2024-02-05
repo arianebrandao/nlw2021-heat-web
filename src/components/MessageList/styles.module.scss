@@ -1,14 +1,18 @@
 .messageListWrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  padding: 1rem;
+  margin-bottom: 1rem;
 
-  //primeira img
-  > img {
-    height: 28px;
-    margin: 32px 0;
+  grid-area: message;
+}
+
+@media (min-width: 992px) {
+  .messageListWrapper {
+    align-self: center;
   }
 }
 

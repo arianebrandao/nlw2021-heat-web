@@ -3,7 +3,6 @@ import io from 'socket.io-client'
 import { api } from '../../services/api'
 
 import styles from './styles.module.scss'
-import logoImage from '../../assets/logo.svg'
 import { Loading } from '../Loading'
 
 interface Message {
@@ -53,7 +52,6 @@ export function MessageList() {
 
   return (
     <div className={styles.messageListWrapper}>
-      <img src={logoImage} alt="DoWhile 2021" />
       <ul className={styles.messageList}>
         {isLoadingLast3Messages ? <Loading /> : (
           messages.map(message => (
